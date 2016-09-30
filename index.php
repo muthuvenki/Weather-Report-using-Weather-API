@@ -1,0 +1,35 @@
+<?php
+?>
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      $('.message a').click(function(){
+        $('form').animate({height: "toggle", opacity: "toggle"}, "fast");
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+      <form action="register.php" method="post"  class="register-form">
+         <input type="text" name="user" placeholder="username"/>
+        <input type="password" name="pass" placeholder="password"/>
+        <input type="submit" value="create">
+        <p class="message">Already registered? <a href="#">Sign In</a></p>
+      </form>
+      <form action="checklogin.php" method="post" class="login-form">
+        <input type="text" name="user" placeholder="username"/>
+        <input type="password" name="pass" placeholder="password"/>
+        <input type="submit" value="login">
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
